@@ -41,10 +41,10 @@ cacheSolve <- function(x, ...) {
     }
     
     ## If the result has not been cached get the initial matrix x and calculate its inverse matrix by using solve function.
-    matrix <- x$get()
-    m <- solve(matrix, ...)
+    data <- x$get()
+    i <- solve(data, ...)
     
     ## It stores the result in x variable.
-    x$setInverse(m)
-    m
+    x$setInverse(i)
+    i
 }
